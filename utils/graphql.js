@@ -2,7 +2,7 @@ const axios = require('axios')
 const gqlEndpoint =  "https://squid.subsquid.io/reef-explorer/graphql";
 
 const query0 = `query StakeEventsNr($contractAddress: String!,$topic:String!) {
-    evmEventsConnection(orderBy: id_ASC, first: 10, where: {contractAddress_eq: $contractAddress, topic0_eq: $topic}) {
+    evmEventsConnection(orderBy: id_ASC, first: 100, where: {contractAddress_eq: $contractAddress, topic0_eq: $topic}) {
         pageInfo {
           hasNextPage
           endCursor
@@ -17,7 +17,7 @@ const query0 = `query StakeEventsNr($contractAddress: String!,$topic:String!) {
   }`
 
 const query1 = `query StakeEventsNr($contractAddress: String!,$topic:String!,$after:String!) {
-    evmEventsConnection(orderBy: id_ASC, first: 10, where: {contractAddress_eq: $contractAddress, topic0_eq: $topic}, after: $after) {
+    evmEventsConnection(orderBy: id_ASC, first: 100, where: {contractAddress_eq: $contractAddress, topic0_eq: $topic}, after: $after) {
         pageInfo {
           hasNextPage
           endCursor

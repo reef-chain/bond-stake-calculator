@@ -36,7 +36,7 @@ async function fetchEvents() {
         break;
       }
     }
-    console.log("Total Staked: ",totalStaked.toNumber()/1e18);
+    console.log("\nTotal Staked: ",totalStaked.toNumber()/1e18);
   }
   
 fetchEvents();
