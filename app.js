@@ -1,4 +1,5 @@
 const {argv} = require('./utils/args');
+const banner = require('./utils/banner');
 const {fetchStakeEvents} = require('./utils/graphql')
 const {BigNumber} = require('bignumber.js')
 
@@ -39,6 +40,7 @@ async function fetchEvents() {
     console.log("\nTotal Staked: ",totalStaked.toNumber()/1e18);
   }
   
+console.log(banner)
 fetchEvents();
 
 
